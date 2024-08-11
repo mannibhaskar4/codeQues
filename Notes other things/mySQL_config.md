@@ -79,9 +79,21 @@ You'll be prompted to enter the password you set for the new user.
 
 - Step 6: (Optional) Grant Additional Privileges
 If you need to grant specific privileges rather than all privileges, you can use a command like:
-```GRANT SELECT, INSERT, UPDATE, DELETE ON database_name.* TO 'new_user'@'localhost';```  
+```GRANT CREATE, DROP, SELECT, INSERT, UPDATE, DELETE ON database_name.* TO 'new_user'@'localhost';```  
 This grants the user permission to select, insert, update, and delete data in the specified database.
 
 - Step 7: (Optional) Revoke Privileges
 If you need to revoke privileges from the user, use a command like:
 ```REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'new_user'@'localhost';```
+
+# To create Databases
+
+To create a table named tes inside the users database, follow these steps:
+
+Create the database (if not already created):
+
+```CREATE DATABASE users;```  
+Switch to the users database:
+```
+USE users;
+```
