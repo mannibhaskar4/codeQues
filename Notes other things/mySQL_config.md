@@ -97,3 +97,12 @@ Switch to the users database:
 ```
 USE users;
 ```
+
+
+# To Grant refrences and fk permissions
+
+```
+GRANT REFERENCES ON database_name.* TO 'username'@'localhost';
+```
+
+
