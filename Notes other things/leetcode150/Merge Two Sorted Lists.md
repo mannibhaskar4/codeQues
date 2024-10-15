@@ -20,6 +20,22 @@ combining these for pos(-1)
 8. return (code) next value of reference from point 2
 
 
+### Explanation:
+
+1.  We initialize `i`, `j`, and `k` as pointers for the current elements in `nums1`, `nums2`, and the result in `nums1` respectively.
+2.  The first `while` loop handles the case where both `nums1` and `nums2` have elements to compare.
+3.  The second `while` loop handles the case where there are remaining elements in `nums2`. If `i` becomes negative before `j`, this loop ensures that all elements from `nums2` are copied to `nums1`.
+4.  Since `nums1` is already in place, no need to handle remaining elements in `nums1`.
+
+### Time Complexity:
+
+-   The time complexity is `O(m + n)` because we go through each element of both `nums1` and `nums2` exactly once.
+
+### Space Complexity:
+
+-   The space complexity is `O(1)` because the merging happens in-place without using extra space.
+
+
 ```
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
